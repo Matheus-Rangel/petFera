@@ -1,3 +1,5 @@
+#ifndef FUNCIONARIO_H
+#define FUNCIONARIO_H
 #include<string>
 using namespace std;
 class funcionario {
@@ -19,7 +21,7 @@ public:
 	void set_tipo_sanguineo(short t):tipo_sanguineo(t){}
 	void set_fatorRH(char f):fatorRH(f){}
 	void set_especialidade(string e):especialidade(e){}
-	int get_id();
+	int get_id(){return id;}
 	string get_nome(){ return nome;}
 	string get_cpf(){return cpf;}
 	short get_idade(){return idade;}
@@ -27,3 +29,8 @@ public:
 	char get_fatorRH(){return fatorRH;}
 	string get_especialidade(){return especialidade;}
 };
+class veterinario : public funcionario {
+}
+class tratador : public funcionario{
+}
+#endif
